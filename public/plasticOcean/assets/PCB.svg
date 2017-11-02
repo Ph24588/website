@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1336.5 540.6" style="enable-background:new 0 0 1336.5 540.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{font-family:'HelveticaNeue';}
+	.st2{font-size:80px;}
+	.st3{font-size:60px;}
+	.st4{fill:none;stroke:#FFFFFF;stroke-width:7;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#FFFFFF;stroke-width:10;stroke-miterlimit:10;}
+</style>
+<title>PCB</title>
+<g>
+	<text transform="matrix(1 0 0 1 0 441.21)" class="st0 st1 st2">(CI)</text>
+	<text transform="matrix(1 0 0 1 119.92 441.21)" class="st0 st1 st3">n</text>
+	<text transform="matrix(1 0 0 1 220.26 68.56)" class="st0 st1 st2">3</text>
+	<text transform="matrix(1 0 0 1 466.91 68.56)" class="st0 st1 st2">2</text>
+	<text transform="matrix(1 0 0 1 101.4 251.04)" class="st0 st1 st2">4</text>
+	<text transform="matrix(1 0 0 1 216.61 502.09)" class="st0 st1 st2">5</text>
+	<text transform="matrix(1 0 0 1 466.91 502.09)" class="st0 st1 st2">6</text>
+	<text transform="matrix(1 0 0 1 807.64 502.09)" class="st0 st1 st2">6’</text>
+	<text transform="matrix(1 0 0 1 1054.09 502.09)" class="st0 st1 st2">5’</text>
+	<text transform="matrix(1 0 0 1 802.11 68.56)" class="st0 st1 st2">2’</text>
+	<text transform="matrix(1 0 0 1 1052.8 68.56)" class="st0 st1 st2">3’</text>
+	<text transform="matrix(1 0 0 1 1173.23 250.04)" class="st0 st1 st2">4’</text>
+	<text transform="matrix(1 0 0 1 1183.23 441.21)" class="st0 st1 st2">(CI)</text>
+	<text transform="matrix(1 0 0 1 1303.15 441.21)" class="st0 st1 st3">n</text>
+</g>
+<polygon class="st4" points="261.7,423.9 164.2,255 261.7,86.2 456.7,86.2 554.2,255 456.7,423.9 "/>
+<polygon class="st4" points="855.8,423.9 758.3,255 855.8,86.2 1050.8,86.2 1148.3,255 1050.8,423.9 "/>
+<line class="st4" x1="554.2" y1="255" x2="758.3" y2="255"/>
+<line class="st4" x1="131.1" y1="379.1" x2="352.8" y2="262.4"/>
+<line class="st4" x1="939.8" y1="262.4" x2="1179.9" y2="374.2"/>
+<line class="st4" x1="287.8" y1="120.8" x2="199.6" y2="267.3"/>
+<line class="st5" x1="274" y1="390.8" x2="442" y2="390.8"/>
+<line class="st4" x1="427.4" y1="120.8" x2="511.8" y2="267.3"/>
+<line class="st4" x1="1022.2" y1="402.8" x2="1110.4" y2="256.3"/>
+<line class="st5" x1="1045" y1="120.8" x2="877" y2="120.8"/>
+<line class="st4" x1="883.5" y1="402.8" x2="799.2" y2="256.3"/>
+</svg>

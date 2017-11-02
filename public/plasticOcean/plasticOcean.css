@@ -1,0 +1,517 @@
+.clickMe {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100px;
+	transition: 1s; 
+	z-index: 100;
+}
+
+#scene {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+#sceneTwo {
+	position: fixed;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	opacity: 0;
+	z-index: 18;
+}
+
+.landing {
+	position: absolute;
+	display: block;
+	top: -3px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	background: url("assets/background.svg");
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.skylights {
+	width: 170%;
+	height: 170%;
+	top: -500px;
+	left: -600px;
+	z-index: 1;
+	display: block;
+	position: absolute;
+}
+
+.frontWave {
+	width: 120%;
+	height: 100%;
+	top: 480px;
+	left: -170px;
+	z-index: 4;
+	display: block;
+	position: absolute;
+}
+
+.midWave {
+	width: 120%;
+	height: 100%;
+	top: 370px;
+	left: -100px;
+	z-index: 3;
+	display: block;
+	position: absolute;
+}
+
+.backWave {
+	width: 120%;
+	height: 100%;
+	top: 350px;
+	left: -150px;
+	z-index: 2;
+	display: block;
+	position: absolute;
+}
+
+.fakeBottle {
+	width: 135px;
+	height: 60px;
+	top: 425px;
+	left: 260px;
+	z-index: 30;
+	transform: rotate(-25deg);
+	display: block;
+	position: absolute;
+}
+
+.bottle {
+	width: 100%;
+	height: 100%;
+	top: 370px;
+	left: -310px;
+	z-index: 3;
+	display: block;
+	position: absolute;
+}
+
+.pollution {
+	width: 70%;
+	height: 70%;
+	top: 100px;
+	left: 680px;
+	z-index: 1;
+	display: block;
+	position: absolute;
+}
+
+.clouds {
+	width: 110%;
+	height: 110%;
+	top: -320px;
+	left: -60px;
+	z-index: 0;
+	display: block;
+	position: absolute;
+}
+
+.smolBottle {
+	width: 30%;
+	height: 30%;
+	top: 265px;
+	left: 33%;
+	z-index: -1;
+	display: block;
+	position: fixed;
+}
+
+.foam {
+	left: -40px;
+	z-index: -1;
+	display: block;
+	position: absolute;
+	overflow-x: hidden;
+}
+
+.bubbleBg {
+	top:0;
+	left: 0;
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.expo-1 {
+	top: 70px;
+	left: 90px;
+	position: fixed;
+	display: block;
+	height: auto;
+	width: 700px;
+	color: white;
+	text-align: left;
+	font-family: 'Nunito Sans', sans-serif;
+	z-index: 1;
+}
+
+.expo-2 {
+	top: 100px;
+	left: 900px;
+	position: fixed;
+	display: block;
+	height: auto;
+	width: 450px;
+	color: white;
+	text-align: left;
+	font-family: 'Nunito Sans', sans-serif;
+	z-index: 1;
+}
+
+h1 {
+	font-size: 9em; 
+	position: relative;
+	font-weight: 700;
+	line-height: 140px;
+	margin: 0 0 30px 0;
+	width: 300px;
+}
+
+p {
+	font-size: 2em; 
+	position: relative;
+	line-height: 45px;
+	margin: 0;
+}
+
+.PCB {
+	top: 350px;
+	left: 880px;
+	position: fixed;
+	display: block;
+	height: 30%;
+	width: 30%;
+	z-index: 1;
+}
+
+.BPA {
+	top: 560px;
+	left: 860px;
+	position: fixed;
+	display: block;
+	height: 32%;
+	width: 32%;
+	z-index: 1;
+}
+
+
+.centerCopy {
+	top: 350px;
+	position: fixed;
+	display: block;
+	height: auto;
+	margin-left: 25%;
+	width: 50%;
+	height: auto;
+	color: white;
+	text-align: center;
+	font-family: 'Nunito Sans', sans-serif;
+	border: 2px solid white; 
+}
+
+.progressBar {
+	top: 670px;
+	left: 10%;
+    width: 80%;
+    height: 30px;
+    background-color: rgba(255, 255 , 255 ,.5);
+    position: fixed;
+    z-index: 10;
+    border: none 2px solid;
+    border-radius: 25px;
+}
+
+.fillBar {
+	position: absolute;
+	width: 0;
+	z-index: 11;
+	height: 30px;
+	background-color: white;
+	    border: none 2px solid;
+    border-radius: 25px;
+}
+
+.leftFish {
+	position: fixed;
+	display: block;
+	z-index: 11;
+}
+
+.rightFish {
+	position: fixed;
+	display: block;
+	z-index: 11;
+}
+
+.microbits {
+	top: 265px;
+	left: 33%;
+	position: fixed;
+	display: block;
+	width: 35%;
+	height: 35%;
+}
+
+.dark {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: black;
+	z-index: 0;
+	opacity: 0;
+}
+
+.spotlight {
+  position:fixed;
+  top:225px;
+  left:475px;
+  height:200px;
+  width:200px;
+  border-radius:50%;
+  background:transparent;
+  box-shadow: 0 0 0 2000px black;
+  opacity: 0;
+}
+
+.fish_background {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: block;
+	background: #EFC5D3;
+	z-index: 0;
+}
+
+.fish_frame {
+	width: 140%;
+	height: 130%;
+	top: -130px;
+	left: -300px;
+	position: absolute;
+	display: block;
+	z-index: 10;
+}
+
+.fish_skeleton {
+	width: 120%;
+	height: 120%;
+	top: -100px;
+	left: -150px;
+	z-index: 1;
+	display: block;
+	position: absolute;
+}
+
+.fish_guts {
+	width: 50%;
+	height: 50%;
+	z-index: 1;
+	display: block;
+	position: absolute;
+}
+
+.exit {
+	top: 600px;
+	left: 41.5%;
+	width: 300px;
+	height: 85px;
+	background: #FF4A4A;
+	color: white;
+	display: block;
+	position: fixed;
+	z-index: 21;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 1.5em;
+	border-radius: 100px;
+	letter-spacing: .5px;
+}
+
+.expoFleece {
+	top: 100px;
+	left: 900px;
+	width: 300px;
+	height: auto;
+	color: white;
+	display: block;
+	position: fixed;
+	z-index: 21;
+	font-family: sans-serif;
+	font-size: 1.25em;
+	opacity: 1;
+}
+
+.expoShards {
+	top: 100px;
+	left: 200px;
+	width: 300px;
+	height: auto;
+	color: white;
+	display: block;
+	position: fixed;
+	z-index: 21;
+	font-family: sans-serif;
+	font-size: 1.25em;
+	opacity: 1;
+}
+
+.expoNurdles {
+	top: 600px;
+	left: 900px;
+	width: 300px;
+	height: auto;
+	color: white;
+	display: block;
+	position: fixed;
+	z-index: 21;
+	font-family: sans-serif;
+	font-size: 1.25em;
+	opacity: 1;
+}
+
+.seafloor {
+	position: absolute;
+	display: block;
+	top: 7800px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	width: auto;
+	height: auto;
+}
+
+.finalExpo {
+	top: 200px;
+	width: 100%;
+	height: auto;
+	color: white;
+	position: fixed;
+	display: none;
+	height: auto;
+	text-align: center;
+	font-family: 'Nunito Sans', sans-serif;
+	opacity: 0;
+	z-index: 30;
+	margin-left: 12.5%;
+	cursor: pointer;
+}
+
+.theresMore {
+	top: 650px;
+	left: 41.5%;
+	width: 300px;
+	height: 85px;
+	background: white;
+	color: grey;
+	display: block;
+	position: fixed;
+	z-index: 21;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 1.5em;
+	border-radius: 100px;
+	letter-spacing: .5px;
+	opacity: 0;
+}
+
+.buttonGroup {
+	top: 400px;
+	width: 100%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+	position: fixed;
+	z-index: 30;
+	opacity: 0;
+}
+
+.finalButton {
+	width: 350px;
+	height: 85px;
+	background: white;
+	color: black;
+	display: block;
+	position: relative;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 1.5em;
+	border-radius: 100px;
+	letter-spacing: .5px;
+	margin:20px;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+}
+
+.ball {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 4px;
+  display: block;
+  position: absolute;
+  z-index: 11;
+  left: 16px;
+  top: 10px;
+}
+
+.mouse {
+  top: 87%;
+  width: 40px;
+  height: 70px;
+  border: 2px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 25px;
+  z-index: 11;
+  position: fixed;
+  left: 50%;
+  z-index: 100;
+}
+
+/* ---- reset ---- */
+
+body {
+	margin: 0;
+}
+
+canvas {
+	display: block;
+	vertical-align: bottom;
+}
+
+  /* ---- particles.js container ---- */
+
+#particles-js {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-image: url("");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	z-index: -2;
+}

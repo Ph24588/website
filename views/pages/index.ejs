@@ -1,66 +1,279 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <% include ../partials/header.ejs %>
-</head>
-
+  <title></title>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,700" rel="stylesheet">
+   <link rel="stylesheet" href="plasticOcean/plasticOcean.css">
+   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <body>
 
-  <% include ../partials/nav.ejs %>
+<audio src="plasticOcean/assets/splash.wav" id="splashAudio"></audio>
+<audio src="plasticOcean/assets/ocean_sound.wav" id="oceanAudio" autoplay loop></audio>
+<audio src="plasticOcean/assets/underwater.wav" id="underAudio" loop></audio>
 
-<div class="jumbotron text-center">
-  <div class="container">
-    <a href="/" class="lang-logo">
-      <img src="/lang-logo.png">
-    </a>
-    <h1>Getting Started with Node on Heroku v1.0 dev branch</h1>
-    <p>This is a sample Node application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs"><span class="glyphicon glyphicon-flash"></span> Getting Started with Node</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/node-js-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
-  </div>
-</div>
-<div class="container">
-  <div class="alert alert-info text-center" role="alert">
-    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs" class="alert-link">Getting Started with Node on Heroku</a> tutorial.
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
-      <ul>
-        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/node-js-getting-started">Heroku Button</a> on the repository.</li>
+<div class="fakeBottle"></div>
 
-        <li>When Heroku received the source code, it fetched all the dependencies in the <a href="https://github.com/heroku/node-js-getting-started/blob/master/package.json">package.json</a>, creating a deployable slug.</li>
-        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-link"></span> Next Steps</h3>
-      <ul>
-        <li>If you are following the <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started</a> guide, then please head back to the tutorial and follow the next steps!</li>
-        <li>If you deployed this app by deploying the Heroku Button, then in a command line shell, run:</li>
-        <ul>
-          <li><code>git clone https://github.com/heroku/node-js-getting-started.git</code> - this will create a local copy of the source code for the app</li>
-          <li><code>cd node-js-getting-started</code> - change directory into the local source code repository</li>
-          <li><code>heroku git:remote -a &lt;your-app-name></code> - associate the Heroku app with the repository</li>
-          <li>You'll now be set up to run the app locally, or <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs#push-local-changes">deploy changes</a> to Heroku</li>
-        </ul>
-      </ul>
-      <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
-      <ul>
-        <li><a href="https://www.heroku.com/home">Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started with Node on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/deploying-nodejs">Deploying Node Apps on Heroku</a></li>
-      </ul>
-    </div>
-  </div> <!-- row -->
-   <div class="alert alert-info text-center" role="alert">
-    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
-  </div>
+<div data-relative-input="true" data-clip-relative-input="true" id="scene">
+  <div class="landing"></div>
+  <img src="plasticOcean/assets/skylights.svg" class="skylights" data-depth="0.4">
+  <img src="plasticOcean/assets/wave1.svg" class="frontWave" data-depth="0.4">
+  <img src="plasticOcean/assets/wave2.svg" class="midWave" data-depth="0.4">
+  <div class="fakeBottle" data-depth="0.8" style="background: none;"></div>
+  <img src="plasticOcean/assets/bottle.svg" class="bottle" data-depth="0.8">
+  <img src="plasticOcean/assets/wave3.svg" class="backWave" data-depth="0.4">
+  <img src="plasticOcean/assets/pollution.svg" class="pollution" data-depth="0.3">
+  <img src="plasticOcean/assets/clouds.svg" class="clouds" data-depth="0.2">
 </div>
 
+<img src="plasticOcean/assets/otherBottle.svg" class="smolBottle" data-3360="opacity:1" data-3460="opacity:0">
 
+<img src="plasticOcean/assets/foam1.svg" class="foam" data-0="top:350px;" data-400="top:500px;" width="101%;" height="101%;" style="left: -1%;">
+<img src="plasticOcean/assets/foam2.svg" class="foam" data-400="top:550px;" data-600="top:750px;" width="75%;" height="75%;" style="left: 13%">
+<img src="plasticOcean/assets/foam3.svg" class="foam" data-550="top:550px;" data-850="top:1100px;" width="55%;" height="55%;" style="left: 22%">
+
+<div style="position: fixed; width: 100%; height: 100%; z-index:-1;">
+<img src="plasticOcean/assets/bubbleBackground.png" class="bubbleBg" data-0="top:0px;" data-7500="top:-5000px;">
+</div>
+
+<div class="centerCopy" data-1500="opacity:0" data-1600="opacity:1" data-1700="opacity:1" data-1800="opacity:0">
+  <br>
+  <p>Oh, it looks like the bottle slipped while you were trying to pick it up. It's difficult to pick out plastic once it's descending into the water. Let's follow it and see what where it's going.</p>
+  <br>
+</div>
+
+<div class="expo-1" data-1800="opacity:0" data-1900="opacity:1" data-2000="opacity:1" data-2100="opacity:0">
+  <h1>Over 300 million tons</h1>
+  <p>of plastic are being produced every year. 8 million tons of that are dumped into the ocean. 14% of all litter come from beverage bottles like this one.</p>
+</div>
+
+<div class="expo-2" data-1800="opacity:0" data-1900="opacity:1" data-2000="opacity:1" data-2100="opacity:0">
+  <p>These degrading plastics leach toxic <u>PCBs (Polychlorinated Bipheynls)</u> and <u>BPAs (bisphenol A)</u> that accumulate in human and animal tissue.</p>
+</div>
+
+<img src="plasticOcean/assets/PCB.svg" class="PCB" data-1800="opacity:0" data-1900="opacity:1" data-2000="opacity:1" data-2100="opacity:0">
+<img src="plasticOcean/assets/BPA.svg" class="BPA" data-1800="opacity:0" data-1900="opacity:1" data-2000="opacity:1" data-2100="opacity:0">
+
+<div class="centerCopy" data-2400="opacity:0" data-2600="opacity:1" data-2800="opacity:1" data-3000="opacity:0" style="top: 280px;">
+  <br>
+  <p>Plastics like this break down into <u>microplastics</u> <br>that are ingested by ocean animals. It looks like some fish are coming towards this bottle now. <br><br> When you see the white bar, keep pressing the <br><b>back arrow key</b> to keep the fish from eating <br>the plastic!</p>
+  <br>
+</div>
+
+<div class="progressBar" data-3360="opacity:0" data-3660="opacity:1">
+  <div class="fillBar"></div>
+</div>
+
+<div data-3360="opacity:0;" data-3660="opacity:1;" class="fish">
+<img src="plasticOcean/assets/Yellow_fish.gif" width="150px" height="100px" class="rightFish" data-3360="left:1300px" data-3660="left:750px" style="top:400px" id="yellowFish">
+<img src="plasticOcean/assets/Navy_fish.gif" width="165px" height="100px" class="rightFish" data-3360="left:1300px" data-3660="left:725px" style="top:490px" id="navyFish">
+<img src="plasticOcean/assets/Stripe_fish.gif" width="150px" height="125px" class="rightFish" data-3360="left:1300px" data-3660="left:650px" style="top:200px" id="stripeFish">
+<img src="plasticOcean/assets/Red_fish.gif" width="215px" height="100px" class="rightFish" data-3360="left:1300px" data-3660="left:750px" style="top:300px" id="redFish">
+
+<img src="plasticOcean/assets/Green_fish.gif" width="175px" height="115px" class="leftFish" data-3360="left:-100px" data-3660="left:525px" style="top:450px; transform: scaleX(-1);" id="greenFish">
+<img src="plasticOcean/assets/Cookie_fish.gif" width="150px" height="100px" class="leftFish" data-3360="left:-100px" data-3660="left:575px" style="top:350px; transform: scaleX(-1);" id="cookieFish">
+<img src="plasticOcean/assets/Blue_fish.gif" width="125px" height="75px" class="leftFish" data-3360="left:-100px" data-3660="left:525px" style="top:275px" id="blueFish">
+
+<img src="plasticOcean/assets/micro_1.svg" class="microbits" id="micro_1">
+<img src="plasticOcean/assets/micro_2.svg" class="microbits" id="micro_2">
+<img src="plasticOcean/assets/micro_3.svg" class="microbits" id="micro_3">
+</div>
+
+<div class="centerCopy" style="opacity: 0; top: 350px;" id="fishGotAway">
+  <br>
+  <p>It looks like all of the fish got away after eating the plastic. Ingesting plastic is very harmful to both people and animals. It's likely that the runaway fish will become very sick, and may even die. Luckily, one stuck around. <b>Click on the fish</b> to see if we can help clear out some of the plastics in there.</p>
+  <br>
+</div>
+
+<div class="dark"></div>
+<div class="spotlight"></div>
+
+<div class="exit" style="background: #BC3131; top: 607px;"><br></div>
+<div class="exit"><br>Leave the fish</div>
+
+<div class="centerCopy" style="opacity: 0; z-index: 30;" id="expo-Inside">
+  <br>
+  <p><b>Hover over the plastic pieces</b> to learn more<br> about what harm they can do. <br><b>Click on the plastic</b> to clear it out.</p>
+  <br>
+</div>
+
+<div class="expoNurdles">Nurdles are small round pieces of plastic that are melted and used to create larger pieces of plastic. Spills and mishandling leads to these ending up in oceans and in the bodies of sea animals. Like other plastics, they don't go away and only breakdown into smaller pieces.</div>
+<div class="expoShards">Plastic bottles breakdown into sharp pieces like these. Algae gets stuck to them and cause fish and other creatures to eat them, thinking that it's food. These sharp edges can cause internal injury, possibly leading to death.</div>
+<div class="expoFleece">Polyester is a major culprit in producing microplastics. Each cycle of a washing machine could release more than 700,000 microscopic plastic fibres into the environment. They get washed into domestic wastewater and then into sewage treatment plants, where they get mixed into sewage. Eventually, they make their way into fish like this one.</div>
+
+<div data-relative-input="true" data-clip-relative-input="true" id="sceneTwo" style="z-index: 19;">
+  <div class="fish_background"></div>
+  <img src="plasticOcean/assets/fish_skeleton.svg" class="fish_skeleton" data-depth="0.2">
+  <img src="plasticOcean/assets/fish_blad.svg" class="fish_guts" data-depth="0.23" style="top: 350px; left: 750px;">
+  <img src="plasticOcean/assets/fish_stom.svg" class="fish_guts" data-depth="0.3" style="top: 530px; left: 660px; width: 30%; height: 30%;">
+  <img src="plasticOcean/assets/fish_kidn.svg" class="fish_guts" data-depth="0.29" style="top: 120px; left: 320px; width: 80%; height: 80%;">
+  <img src="plasticOcean/assets/fish_aort.svg" class="fish_guts" data-depth="0.32" style="top: 200px; left: 380px; width: 70%; height: 70%;">
+  <img src="plasticOcean/assets/fish_hear.svg" class="fish_guts" data-depth="0.35" style="top: 660px; left: 1100px; width: 20%; height: 20%;">
+  <img src="plasticOcean/assets/fish_inte.svg" class="fish_guts" data-depth="0.38" style="top: 570px; left: 250px;">
+  <img src="plasticOcean/assets/fish_frame.svg" class="fish_frame" data-depth="0.45"">
+  <img src="plasticOcean/assets/plastic_shards.svg" class="fish_guts clickable" data-depth="0.45" style="top:600px; left:700px;" id="shards">
+  <img src="plasticOcean/assets/nurdles.svg" class="fish_guts clickable" data-depth="0.2" style="top:100px; left:150px; width: 30%; height: 30%;" id="nurdles">
+  <img src="plasticOcean/assets/fleece.svg" class="fish_guts clickable" data-depth="0.3" style="top:550px; left:-100px;" id="fleece">
+</div>
+
+<div class="centerCopy" data-3860="opacity:0" data-3960="opacity:1" data-4060="opacity:1" data-4160="opacity:0" style="top: 225px;">
+  <br>
+  <p>Plastic pollution effects more than just the fish. <br>The contaminated fish and sea creatures <br>are caught and sold for human consumption<br> every day. The toxins in the fish have been <br>linked to cancers, birth defects, immune system problems, and childhood developmental issues in humans... and there's even more than that.</p>
+  <br>
+</div>
+
+<div class="theresMore" style="background: #999999; top: 657px;" data-3860="opacity:0" data-3960="opacity:1" data-4060="opacity:1" data-4160="opacity:0"><br></div>
+<div class="theresMore" data-3860="opacity:0" data-3960="opacity:1" data-4060="opacity:1" data-4160="opacity:0"><br>There's more?</div>
+
+<img src="plasticOcean/assets/seafloor.svg" class="seafloor">
+
+  <p id="finalExpo_1" class="finalExpo" style="opacity: 0; width: 75%;">The damage you've seen so far all came from smaller plastics, like bottles and fleece sweaters. That's just the tip of the iceberg. The ocean has become a dumping ground, where large pieces of trash are regularly deposited. These objects down here are just a few examples of things that are inappropriately thrown away.</p>
+  <p id="finalExpo_2" class="finalExpo" style="opacity: 0; width: 75%;">These pollutants taint our ocean ecosystems and hurts everything in it, and out of it. As of right now, there are over 5.25 trillion pieces of garbage in our oceans, and that number is only going up.</p>
+  <p id="finalExpo_3" class="finalExpo" style="opacity: 0; width: 75%;">All hope is not lost. You can make a change right now by recycling responsibly, reducing the amount of plastics you consume, and, if you do use plastic products, reusing them before disposing of them.</p>
+  <p id="finalExpo_4" class="finalExpo" style="opacity: 0; width: 75%;">To help even further, you can donate and support those cleaning up our oceans on the front-lines.</p>
+  <p id="finalExpo_5" class="finalExpo" style="opacity: 0; width: 75%;">Thanks for listening. <br>If you enjoyed this, consider sharing this with your friends. <br><br><br><br><br><br><br><br><br><br><br>This experience was created by <u>Paul Hwang.</u><br>Special thanks to <u>AJ Banerjee.</u></p>
+
+<div class="buttonGroup">
+  <a href="https://www.google.com" target="_blank"><div class="finalButton"><br>Donate</div></a>
+  <a href="https://www.google.com" target="_blank"><div class="finalButton"><br>Organization's website</div></a>
+<!--   <a href="https://www.google.com" target="_blank"><div class="finalButton"><br>Contact your lawmakers</div></a>
+ --></div>
+
+<div id="particles-js" data-500="background-color:rgb(0,200,255); box-shadow: inset 0 0 300px rgba(0,0,0,0);" data-7500="background-color:rgb(0,9,65); box-shadow: inset 0 0 300px rgba(0,0,0,1);"></div>
+
+<div class="mouse">
+  <div class="ball"></div>
+</div>
+
+<script type="text/javascript">
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 40,
+      "density": {
+        "enable": true,
+        "value_area": 700
+      }
+    },
+    "color": {
+      "value": ["#FFFFFF"]
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "white"
+      },
+      "polygon": {
+        "nb_sides": 5
+      }
+    },
+    "opacity": {
+      "value": 0.3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.05,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 7,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 1,
+        "size_min": 0.15,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 110,
+      "color": "white",
+      "opacity": 0,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 1,
+      "direction": "top",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": false,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": false,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script>
 </body>
+<!-- Jquery, Parallax, Skrollr -->
+  <script src="plasticOcean/parallax.js"></script>
+  <script type="text/javascript" src="plasticOcean/skrollr.js"></script>
+  <script type="text/javascript">
+  var s = skrollr.init();
+  </script>
+  <script type="text/javascript" src="plasticOcean/plasticOcean.js"></script>
+  <!-- 
+  Credits
+    Sounds
+    -https://www.youtube.com/watch?v=Nf8Lj-ZoGHE
+    -https://www.youtube.com/watch?v=ZyAnmsEXZCc
+    -https://www.youtube.com/watch?v=yH5swYxpWv4
+    Sources 
+    -https://4ocean.com/blogs/blog/how-much-trash-is-in-our-ocean
+    -https://www.nurdlehunt.org.uk/whats-the-problem.html
+    -https://www.greenbiz.com/article/yoga-pants-fleece-jackets-and-microplastics-dilemma
+    -https://www.theguardian.com/lifeandstyle/2017/feb/14/sea-to-plate-plastic-got-into-fish
+    -Plastic ocean documentary
+  -->
 </html>

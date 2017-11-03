@@ -153,52 +153,42 @@ $(document).ready(function() {
 
   }, 10);
 
-  var fishPlasticGravity = setInterval(function() { //Makes the yellow fish go back to the plastic pt2
+  var fishPlasticGravity = setInterval(function() { //Makes the blue fish go back to the plastic pt2
+    var scrollValue = $(window).scrollTop();
+
     var yellowFishLoc = $("#yellowFish").position();
     if (scrollValue >= 3660 && yellowFishLoc.left >= 750) {
       $("#yellowFish").css("left", yellowFishLoc.left - .15);
     }
-  }, 1);
 
-  var fishPlasticGravity = setInterval(function() { //Makes the navy fish go back to the plastic pt2
     var navyFishLoc = $("#navyFish").position();
     if (scrollValue >= 3660 && navyFishLoc.left >= 725) {
       $("#navyFish").css("left", navyFishLoc.left - .15);
     }
-  }, 1);
 
-  var fishPlasticGravity = setInterval(function() { //Makes the stripe fish go back to the plastic pt2
     var stripeFishLoc = $("#stripeFish").position();
     if (scrollValue >= 3660 && stripeFishLoc.left >= 650) {
       $("#stripeFish").css("left", stripeFishLoc.left - .15);
     }
-  }, 1);
 
-  var fishPlasticGravity = setInterval(function() { //Makes the red fish go back to the plastic pt2
     var redFishLoc = $("#redFish").position();
     if (scrollValue >= 3660 && redFishLoc.left >= 750) {
       $("#redFish").css("left", redFishLoc.left - .15);
     }
-  }, 1);
 
-  var fishPlasticGravity = setInterval(function() { //Makes the green fish go back to the plastic pt2
     var greenFishLoc = $("#greenFish").position();
     if (scrollValue >= 3660 && greenFishLoc.left <= 525) {
       $("#greenFish").css("left", greenFishLoc.left + .15);
     }
-  }, 1);
 
-  var fishPlasticGravity = setInterval(function() { //Makes the cookie fish go back to the plastic pt2
-    var cookieFishLoc = $("#cookieFish").position();
-    if (scrollValue >= 3660 && cookieFishLoc.left <= 575) {
-      $("#cookieFish").css("left", cookieFishLoc.left + .15);
-    }
-  }, 1);
-
-  var fishPlasticGravity = setInterval(function() { //Makes the blue fish go back to the plastic pt2
     var blueFishLoc = $("#blueFish").position();
     if (scrollValue >= 3660 && blueFishLoc.left <= 525) {
       $("#blueFish").css("left", blueFishLoc.left + .15);
+    }
+
+    var cookieFishLoc = $("#cookieFish").position();
+    if (scrollValue >= 3660 && cookieFishLoc.left <= 575) {
+      $("#cookieFish").css("left", cookieFishLoc.left + .15);
     }
   }, 1);
 
